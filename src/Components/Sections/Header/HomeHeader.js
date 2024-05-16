@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Typography, Container } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
@@ -32,31 +32,16 @@ const BubbleTypography = styled(Typography)({
   },
 });
 
-const ZoneTu = () => {
-  // Add inline style to set margin: 0 for the body element
-  document.body.style.margin = '0';
-
+const HomeHeader = () => {
   return (
-    <Container 
-      style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        minHeight: '100vh', 
-        backgroundColor: '#1a1a1a', 
-        maxWidth: 'unset', 
-      }}
-    >
-      
-      <Button 
+    <Button 
       component={Link} 
-      to="/home"
+      to="/"
       sx={{
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
+        position: 'absolute',
+        top: 25,
+        left: 30,
+        zIndex: 100,
         backgroundColor:'none',
         textTransform: 'none',
         padding: 0,           
@@ -68,8 +53,7 @@ const ZoneTu = () => {
         ZoneTu
       </BubbleTypography>
     </Button>
-  </Container>
   );
 };
 
-export default ZoneTu;
+export default HomeHeader;

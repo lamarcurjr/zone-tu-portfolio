@@ -1,7 +1,7 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './Components/HomePage';
+import Home from './Components/Home';
 import ZoneTu from './Components/ZoneTu';
 import './App.css';
 
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<ZoneTu />} />
-        <Route path="/HomePage" element={<HomePage />} />
+        <Route path="/Home" element={<Home />} />
       </Routes>
     </Router>
   );
